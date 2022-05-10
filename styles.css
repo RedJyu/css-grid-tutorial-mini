@@ -1,0 +1,94 @@
+:root {
+  --primarycolor: #f15025;
+  --mainblack: #222;
+  --mainwhite: #fff;
+  --offwhite: #f7f7f7;
+  --darkgrwy: #afafaf;
+  --maintransition: all 0.3s linear;
+  --mainspacing: 0.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Coda", monospace;
+  color: var(--mainblack);
+  background: var(--mainwhite);
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainspacing);
+  margin-bottom: 1.25rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  margin-bottom: 0;
+}
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 3px solid var(--primarycolor);
+  color: var(--primarycolor);
+  margin: 3rem;
+  transition: var(--maintransition);
+}
+.btn:hover {
+  background: var(--primarycolor);
+  color: var(--mainwhite);
+}
+/* end of globul */
+
+/* nav */
+
+.main-navbar {
+  background: var(--darkgrwy);
+  padding: 0 2rem;
+}
+.main-navbar li {
+  list-style: none;
+}
+.main-navbar a {
+  text-transform: capitalize;
+  display: block;
+  padding: 1rem 0;
+  color: var(--primarycolor);
+  letter-spacing: var(--mainspacing);
+  transition: var(--maintransition);
+}
+.main-navbar a:hover {
+  color: #222;
+}
+
+@media screen and (min-width: 992px) {
+  .main-navbar ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  main.navbar a {
+    text-align: center;
+  }
+}
